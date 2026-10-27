@@ -93,7 +93,7 @@
       });
 
       /********** Fetch Token from alex8875 **********/
-      let cookieHeader = "";
+      let cookieHeader = "__hdnea__=st=1793089403~exp=1793111003~acl=/bpk-tv/SonySportsTen3HinHDSTB_BTS/WDVLive/*~hmac=de67b403262beab34d149a04287c3e800cdefd9a6566c5dbbc2595cbd3e5e17b";
       try {
         const response = await fetch("https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jtv.m3u");
         const m3uText = await response.text();
@@ -110,11 +110,15 @@
 
       const drmConfig = {
         clearKeys: {
-          "400131994b445d8c8817202248760fda": "2d56cb6f07a75b9aff165d534ae2bfc4"
+          "c20ba4e9d0635bab9f17b177f0d91039":"fcb4a266539ac7b03ef02c5600c5598d",
+"c592c427c0d35e9a8ad88cdcb76a16c1":"8ecb737e4015c22451d6c14fe37e9e15",
+"10f4930166fa5b6ab5d71a4a978bdfac":"9dfa22aa4d6a3d820101f59013de0236",
+"140edf90fa0b5c99864f2442df4df535":"991b51ed2e690c96163a31ae4a6f6452",
+"e392571e46bd5461854986ae9e58083d":"1167c024aa8bbad2c1beaf218cfeec11"
         }
       };
 
-      const streamUrl = "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/output/index.mpd";
+      const streamUrl = "https://jiotvpllive.cdn.jio.com/bpk-tv/SonySportsTen3HinHDSTB_BTS/WDVLive/index.mpd?hdnea=st=1793081116~exp=1793102716~acl=/bpk-tv/SonySportsTen3HinHDSTB_BTS/WDVLive/*~hmac=96aebbbe21bb5fc65c9d3af5e7184f37c028add0dade52d7768b84801f08cce6";
 
       player.configure({
         drm: drmConfig,
